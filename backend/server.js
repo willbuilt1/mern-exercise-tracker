@@ -23,15 +23,15 @@ connection.once('open', () => {
   console.log('DB connected');
 });
 
+app.use('/', (req, res) => {
+  res.send('Hello');
+});
+
 const userRouter = require('./routes/users');
 const exerciseRouter = require('./routes/exercises');
 
 app.use('/users', userRouter);
 app.use('/exercises', exerciseRouter);
-
-app.use('/', (req, res) => {
-  res.send('Hello');
-});
 
 app.listen(port, () => {
   console.log(`server on ${port}`);
