@@ -1,7 +1,8 @@
 import React from 'react';
+import Exercise from './exercise.component';
 
 const ExerciseList = () => {
-  return <h1>EXERCISES</h1>;
+  return <Exercise />;
 };
 
 export default ExerciseList;
